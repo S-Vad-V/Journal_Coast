@@ -22,4 +22,11 @@ public class StudentDao {
         }
         return mongoTemplate.findOne(Query.query(Criteria.where("_id").is(studentId)), Student.class);
     }
+
+    public Student saveStudents(Student student) {
+        if (student == null) {
+            throw new SDException("empty param");
+        }
+        return mongoTemplate.save(student);
+    }
 }
