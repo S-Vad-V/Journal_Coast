@@ -59,6 +59,11 @@
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>ru.utair.servicedesk</groupId>
+            <artifactId>mongo-connector-api</artifactId>
+            <version>1.76</version>
+        </dependency>
     </dependencies>
 
     <build>

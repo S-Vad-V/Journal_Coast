@@ -1,0 +1,16 @@
+version: "3.3"
+networks:
+  journal:
+    driver: bridge
+volumes:
+  journal-mongo-data:
+services:
+  journal-mongodb:
+    image: mongo:4.2.15
+    container_name: journal-mongodb
+    networks:
+      - journal
+    ports:
+      - 27017:27017
+    volumes:
+      - journal-mongo-data:/data/db
